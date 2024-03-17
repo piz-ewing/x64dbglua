@@ -1,0 +1,10 @@
+[submodule "3rd/lua"]
+	path = 3rd/lua
+	url = https://github.com/lua/lua.git
+	branch = v5.4
+[submodule "3rd/luasocket"]
+	path = 3rd/luasocket
+	url = https://github.com/lunarmodules/luasocket.git
+[submodule "3rd/sol2"]
+	path = 3rd/sol2
+	url = https://github.com/ThePhD/sol2.git

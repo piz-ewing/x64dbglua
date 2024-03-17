@@ -1,0 +1,11 @@
+# for xmake
+.xmake
+vsxmake*
+build
+
+# for vscode
+.vscode
+
+# for custom
+release/*
+release.zip
