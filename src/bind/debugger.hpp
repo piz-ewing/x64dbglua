@@ -64,7 +64,11 @@ struct debugger
         if (!directory.empty()) {
             cmd += std::format(",\"{}\"", directory);
         }
-        return DbgCmdExecDirect(cmd.c_str());
+        auto res = DbgCmdExecDirect(cmd.c_str());
+        if (res && wait_for_pause)
+            _plugin_waituntilpaused();
+
+        return res;
     }
 
     static auto stop() -> bool { return DbgCmdExecDirect("stop"); }
