@@ -29,7 +29,7 @@ struct debugger
 
     static auto run(std::optional<bool> wait_for_pause) -> bool
     {
-        bool res = DbgCmdExecDirect("sti");
+        bool res = DbgCmdExecDirect("run");
 
         if (res && wait_for_pause.value_or(true))
             _plugin_waituntilpaused();
